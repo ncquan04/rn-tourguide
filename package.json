@@ -11,7 +11,7 @@
     "test": "TZ=Europe/Paris jest --no-watchman",
     "tsc": "node_modules/.bin/tsc --noEmit",
     "tsc:watch": "node_modules/.bin/tsc --noEmit --watch",
-    "build": "rm -rf lib/ && node_modules/.bin/tsc",
+    "build": "rimraf lib && tsc",
     "config:dev": "json -I -f package.json -e 'this.main=\"node_modules/expo/AppEntry.js\"'",
     "config:npm": "json -I -f package.json -e 'this.main=\"lib/index.js\"'",
     "lint": "tslint --project .",
@@ -61,6 +61,7 @@
     "react-native-svg": "12.1.1",
     "react-native-web": "0.17.1",
     "react-test-renderer": ">=16.8.0",
+    "rimraf": "^6.0.1",
     "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "~4.3.5"

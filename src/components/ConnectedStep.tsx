@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { BorderRadiusObject, Shape } from '../types'
 import { ITourGuideContext } from './TourGuideContext'
+import { ImageSourcePropType } from 'react-native'
 
 declare var __TEST__: boolean
 
@@ -17,7 +18,8 @@ interface Props {
   borderRadiusObject?: BorderRadiusObject
   borderRadius?: number
   keepTooltipPosition?: boolean
-  tooltipBottomOffset?: number
+  tooltipBottomOffset?: number,
+  imgSrc?: ImageSourcePropType
 }
 
 export class ConnectedStep extends React.Component<Props> {

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleProp, ViewStyle } from 'react-native';
+import { ImageSourcePropType, StyleProp, ViewStyle } from 'react-native';
 import { BorderRadiusObject, Shape } from '../types';
 export interface TourGuideZoneProps {
     zone: number;
@@ -14,5 +14,6 @@ export interface TourGuideZoneProps {
     keepTooltipPosition?: boolean;
     tooltipBottomOffset?: number;
     borderRadiusObject?: BorderRadiusObject;
+    imgSrc?: ImageSourcePropType;
 }
-export declare const TourGuideZone: ({ isTourGuide, tourKey, zone, children, shape, text, maskOffset, borderRadius, style, keepTooltipPosition, tooltipBottomOffset, borderRadiusObject, }: TourGuideZoneProps) => JSX.Element;
+export declare const TourGuideZone: ({ isTourGuide, tourKey, zone, children, shape, text, maskOffset, borderRadius, style, keepTooltipPosition, tooltipBottomOffset, borderRadiusObject, imgSrc, }: TourGuideZoneProps) => JSX.Element;

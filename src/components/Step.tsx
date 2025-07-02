@@ -2,6 +2,7 @@ import * as React from 'react'
 import { BorderRadiusObject, Shape } from '../types'
 import { ConnectedStep } from './ConnectedStep'
 import { TourGuideContext } from './TourGuideContext'
+import { ImageSourcePropType } from 'react-native'
 
 interface Props {
   name: string
@@ -15,7 +16,8 @@ interface Props {
   children: React.ReactNode
   keepTooltipPosition?: boolean
   tooltipBottomOffset?: number
-  borderRadiusObject?: BorderRadiusObject
+  borderRadiusObject?: BorderRadiusObject,
+  imgSrc?: ImageSourcePropType
 }
 
 export const Step = (props: Props) => {

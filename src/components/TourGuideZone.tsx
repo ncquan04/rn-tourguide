@@ -52,8 +52,8 @@ export const TourGuideZone = ({
         keepTooltipPosition,
         tooltipBottomOffset,
         borderRadiusObject,
+        imgSrc
       }}
-      imgSrc={imgSrc}
     >
       <Wrapper {...{ style }}>{children}</Wrapper>
     </Step>

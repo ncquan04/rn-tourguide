@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, Text, TouchableOpacity, ImageSourcePropType, Image } from 'react-native'
 
 import { Button } from './Button'
 import styles from './style'
@@ -13,6 +13,7 @@ export interface TooltipProps {
   handleNext?: () => void
   handlePrev?: () => void
   handleStop?: () => void
+  imgSrc?: ImageSourcePropType
 }
 
 export const Tooltip = ({
@@ -23,6 +24,7 @@ export const Tooltip = ({
   handleStop,
   currentStep,
   labels,
+  imgSrc,
 }: TooltipProps) => (
   <View
     style={{
@@ -36,6 +38,18 @@ export const Tooltip = ({
     }}
   >
     <View style={styles.tooltipContainer}>
+      {imgSrc && (
+        <Image 
+          source={imgSrc} 
+          style={{ 
+            width: 60, 
+            height: 60, 
+            marginBottom: 12,
+            borderRadius: 8 
+          }} 
+          resizeMode="cover"
+        />
+      )}
       <Text testID='stepDescription' style={styles.tooltipText}>
         {currentStep && currentStep.text}
       </Text>

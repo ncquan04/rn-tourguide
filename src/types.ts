@@ -1,3 +1,5 @@
+import { ImageSourcePropType } from 'react-native'
+
 export type Shape =
   | 'circle'
   | 'rectangle'
@@ -17,6 +19,7 @@ export interface IStep {
   keepTooltipPosition?: boolean
   tooltipBottomOffset?: number
   borderRadiusObject?: BorderRadiusObject
+  imgSrc?: ImageSourcePropType
 }
 export interface StepObject {
   [key: string]: IStep
